@@ -1,0 +1,8 @@
+#폴더무시
+python/
+
+#파일무시
+*.zip
+*.jpg
+*.jpeg
+*.png
