@@ -6,3 +6,5 @@ python/
 *.jpg
 *.jpeg
 *.png
+*.deb
+*.img
