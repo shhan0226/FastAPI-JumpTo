@@ -1,4 +1,4 @@
-import contextlib
+# import contextlib
 
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
@@ -18,19 +18,15 @@ db = {
 SQLALCHEMY_DATABASE_URL = f"mysql+pymysql://{db['user']}:{db['password']}@{db['host']}:{db['port']}/{db['database']}?charset=utf8"
 
 
-#engine = create_engine(
-#    SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
-#)
-
 engine = create_engine(
-    SQLALCHEMY_DATABASE_URL
+   SQLALCHEMY_DATABASE_URL
 )
 
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
-@contextlib.contextmanager
+# @contextlib.contextmanager
 def get_db():
     db = SessionLocal()
     try:

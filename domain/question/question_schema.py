@@ -8,3 +8,6 @@ class Question(BaseModel):
     subject: str
     content: str
     create_date: datetime.datetime
+
+    # class Config:
+    #     orm_mode = True
